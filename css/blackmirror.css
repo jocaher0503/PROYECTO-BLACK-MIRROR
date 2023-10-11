@@ -1,0 +1,28 @@
+/********************************************************/
+/*      stylesheet for Black Mirror tribute site        */
+/*      author: Juan Carlos Ocaña Heredia               */
+/*      version. 1.0                                    */
+/*      comment: project for Lenguaje de Marcas - 1ºDAM */
+/********************************************************/
+
+/* para incluir una fuente externa hay que indicar donde está eñ archivo, y darle un nombre interno */
+@font-face {
+     src: url(../fonts/cabin-sketch-v1.02/CabinSketch-Regular.ttf);
+    font-family:textonormal;
+}
+@font-face {
+    src: url(../fonts/FontsFree-Net-Proxima-Nova-Bold.otf);
+    font-family:blackmirror;
+}
+
+body{margin: 0; padding: 0; /* para eliminar espacio superio en body */ 
+    background-color: #13131c;
+    color: #dfdbe4;
+    font-family:textonormal;} /* se usa la fuente externa con el nombre que le hemos asignado */
+h1{font-family:blackmirror;
+    text-align: center;
+    color: #13131c;
+    text-shadow: 2px 2px 2px lightgray;}
+#wrapper{background-color: #565b64; 
+    width: 80%;             /* el contenido de la página no llega de punta a punta */
+    margin: auto;}          /* se centra el contenido de la página */
