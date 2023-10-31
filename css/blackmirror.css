@@ -5,7 +5,7 @@
 /*      comment: project for Lenguaje de Marcas - 1ºDAM */
 /********************************************************/
 
-/* para incluir una fuente externa hay que indicar donde está eñ archivo, y darle un nombre interno */
+/* Para incluir una fuente externa hay que indicar donde está eñ archivo, y darle un nombre interno */
 @font-face {
      src: url(../fonts/cabin-sketch-v1.02/CabinSketch-Regular.ttf);
     font-family:textonormal;
@@ -14,15 +14,53 @@
     src: url(../fonts/FontsFree-Net-Proxima-Nova-Bold.otf);
     font-family:blackmirror;
 }
-
-body{margin: 0; padding: 0; /* para eliminar espacio superio en body */ 
+body{
+    margin: 0; padding: 0;                      /* para eliminar espacio superio en body */ 
     background-color: #13131c;
     color: #dfdbe4;
-    font-family:textonormal;} /* se usa la fuente externa con el nombre que le hemos asignado */
-h1{font-family:blackmirror;
+    font-family:textonormal;                    /* se usa la fuente externa con el nombre que le hemos asignado */
+}
+h1{
+    font-family:blackmirror;
     text-align: center;
     color: #13131c;
-    text-shadow: 2px 2px 2px lightgray;}
-#wrapper{background-color: #565b64; 
-    width: 80%;             /* el contenido de la página no llega de punta a punta */
-    margin: auto;}          /* se centra el contenido de la página */
+    text-shadow: 2px 2px 2px lightgray;
+}
+#wrapper{
+    background-color: #565b64; 
+    width: 80%;                                 /* el contenido de la página no llega de punta a punta */
+    margin: auto;                               /* se centra el contenido de la página */
+}
+/************************ hero section ******************************/
+
+#hero{
+    background-image: url(../img/hero.webp);    /* imagen apaisada de buena calidad */
+    background-size: cover;                     /* cubre todo el ancho */
+    height: 95vh;                               /* 90% del alto de la ventana */
+    background-position: center;    
+    position: relative;
+}                                           /*  teniendo en cuenta que la navbar ocupa algo */
+
+#hero button{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    border: none;
+    font-weight: bold;
+    font-size: 0.8em;
+    padding: 3px 15px;
+    border-radius: 15px;
+    background-color: rgb(123, 121, 121);
+}
+#hero button:hover{
+    background-color: #565b64;
+}
+
+
+
+/******************** RESPONSIVIDAD ***********************/
+
+@media only screen and (width<900px) {
+    #wrapper{width: 100%;}
+}
