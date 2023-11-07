@@ -31,21 +31,20 @@ h1{
     width: 80%;                                 /* el contenido de la página no llega de punta a punta */
     margin: auto;                               /* se centra el contenido de la página */
 }
-/************************ hero section ******************************/
+/************************ HERO SECTION ******************************/
 
 #hero{
     background-image: url(../img/hero.webp);    /* imagen apaisada de buena calidad */
     background-size: cover;                     /* cubre todo el ancho */
     height: 95vh;                               /* 90% del alto de la ventana */
     background-position: center;    
-    position: relative;
-}                                           /*  teniendo en cuenta que la navbar ocupa algo */
-
+    position: relative;                         /*  teniendo en cuenta que la navbar ocupa algo */
+}                                           
 #hero button{
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);            /* retoca la posición, al centro del botón */
     border: none;
     font-weight: bold;
     font-size: 0.8em;
