@@ -7,13 +7,16 @@
 
 /* Para incluir una fuente externa hay que indicar donde está eñ archivo, y darle un nombre interno */
 @font-face {
-     src: url(../fonts/cabin-sketch-v1.02/CabinSketch-Regular.ttf);
+    src: url(../fonts/cabin-sketch-v1.02/CabinSketch-Regular.ttf);
     font-family:textonormal;
 }
 @font-face {
     src: url(../fonts/FontsFree-Net-Proxima-Nova-Bold.otf);
     font-family:blackmirror;
 }
+
+*{box-sizing: border-box;}
+
 body{
     margin: 0; padding: 0;                      /* para eliminar espacio superio en body */ 
     background-color: #13131c;
@@ -28,15 +31,15 @@ h1{
 }
 #wrapper{
     background-color: #565b64; 
-    width: 80%;                                 /* el contenido de la página no llega de punta a punta */
+    width: 100%;                                /* MOBILE FIRST */
     margin: auto;                               /* se centra el contenido de la página */
 }
 /************************ HERO SECTION ******************************/
 
 #hero{
-    background-image: url(../img/hero.webp);    /* imagen apaisada de buena calidad */
+    background-image: url(../img/móvil.jpg);   /* imagen apaisada de buena calidad */
     background-size: cover;                     /* cubre todo el ancho */
-    height: 95vh;                               /* 90% del alto de la ventana */
+    height: 90vh;                               /* 90% del alto de la ventana */
     background-position: center;    
     position: relative;                         /*  teniendo en cuenta que la navbar ocupa algo */
 }                                           
@@ -44,7 +47,8 @@ h1{
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%,-50%);            /* retoca la posición, al centro del botón */
+    transform: translate(-50%,-50%);}            /* retoca la posición, al centro del botón */
+button{
     border: none;
     font-weight: bold;
     font-size: 0.8em;
@@ -56,10 +60,34 @@ h1{
     background-color: #565b64;
 }
 
+/******************** INTRO SECTION ***********************/
+
+.grid-2{
+    display: grid;
+    grid-template-columns: 100%;                /* MOBILE FIRST */
+}
+.col-2{
+    padding: 6%;
+}
+#intro img{
+    width: 100%;
+}
+
+/******************** SESSIONS SECTION ********************/
+
+.grid-4{
+    display: grid;
+    grid-template-columns: 100%;
+}
 
 
 /******************** RESPONSIVIDAD ***********************/
 
-@media only screen and (width<900px) {
-    #wrapper{width: 100%;}
+@media only screen and (width>900px) {
+    #wrapper{width: 80%;}                       /* MOBILE FIRST */
+    .grid-2{grid-template-columns: 50% 50%;}    /* MOBILE FIRST */
+    .grid-4{grid-template-columns: auto auto auto auto;}
+}
+@media only screen and (width>650px){
+    .grid-4{grid-template-columns: 50% 50%;}
 }
