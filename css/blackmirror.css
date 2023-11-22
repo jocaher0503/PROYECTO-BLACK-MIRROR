@@ -79,15 +79,18 @@ button{
     display: grid;
     grid-template-columns: 100%;
 }
-
+.col-4{
+    padding: 4%;
+}
 
 /******************** RESPONSIVIDAD ***********************/
+
+@media only screen and (width>650px){
+    .grid-4{grid-template-columns: 50% 50%;}
+}
 
 @media only screen and (width>900px) {
     #wrapper{width: 80%;}                       /* MOBILE FIRST */
     .grid-2{grid-template-columns: 50% 50%;}    /* MOBILE FIRST */
     .grid-4{grid-template-columns: auto auto auto auto;}
-}
-@media only screen and (width>650px){
-    .grid-4{grid-template-columns: 50% 50%;}
 }
