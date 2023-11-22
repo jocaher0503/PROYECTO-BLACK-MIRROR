@@ -26,8 +26,9 @@ body{
 h1{
     font-family:blackmirror;
     text-align: center;
-    color: #13131c;
+    /*color: #13131c;*/
     text-shadow: 2px 2px 2px lightgray;
+    margin: 2vh 0;
 }
 #wrapper{
     background-color: #565b64; 
@@ -72,25 +73,51 @@ button{
 #intro img{
     width: 100%;
 }
+#intro{
+    padding: 15px;
+}
+#intro button:hover{
+    background-color: #7f848f;
+}
 
 /******************** SESSIONS SECTION ********************/
 
 .grid-4{
     display: grid;
-    grid-template-columns: 100%;
+    grid-template-columns: auto;
+    gap: 20px;
 }
 .col-4{
     padding: 4%;
+    border-radius: 10px;
+    background-color: white;
+    color: #565b64;
+}
+#sessions{
+    background-color: rgb(107, 114, 120);
+    padding: 15px;
+}
+#sessions img{
+    width: 100%;
+}
+#sessions button{
+    color: white;
+    background-color: #868a92;
+    display: block;
+    margin: auto;
+}
+#sessions button:hover{
+    background-color: #4b494e;
 }
 
 /******************** RESPONSIVIDAD ***********************/
 
 @media only screen and (width>650px){
-    .grid-4{grid-template-columns: 50% 50%;}
+    .grid-4{grid-template-columns: auto auto;}
 }
 
 @media only screen and (width>900px) {
     #wrapper{width: 80%;}                       /* MOBILE FIRST */
-    .grid-2{grid-template-columns: 50% 50%;}    /* MOBILE FIRST */
+    .grid-2{grid-template-columns: auto auto;}    /* MOBILE FIRST */
     .grid-4{grid-template-columns: auto auto auto auto;}
 }
