@@ -6,16 +6,38 @@
     <title>Black Mirror tribute - Home</title>
     <link rel="stylesheet" href="./css/blackmirror.css">
     <link rel="shortcut icon" href="./img/favicon3.png" type="image/x-icon">
+    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- enlace con jquery, debe ir en el index.html se usa MUCHO para efectos dinámicos -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Mis funciones,  -->
+    <script src="./js/functions.js"></script>
 </head>
 <body>
     <!-- we use usually semantic tags for structure -->
     <!-- 1 nav + 1 hero section + n sections + footer -->
     <div id="wrapper"> <!-- tiene dentro todo el contenido de la página para estilarlo y manipularlo junto, en bloque --> 
-    <nav>Aquí va la barra de navegación</nav>
+    <nav>
+        <div class="topnav" id="myTopnav">
+            <a href="#" class="active">Home</a>
+            <a href="#intro">Introduction</a>
+            <a href="#seasons">Seasons</a>
+            <a href="#facts">Facts</a>
+            <a href="#gallery">Gallery</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </nav>
+
+    <!-- arrow up to came back -->
+    <i class="fa fa-arrow-circle-up" aria-hidden="true"></i>
+
     <!-- HERO SECTION -->
     <section id="hero">
-        <button>Discover!</button>
+        <a href="#intro"><button>Discover!</button></a>
     </section>
+
     <!-- INTRO SECTION -->
     <section id="intro">
         <h1>INTRODUCTION</h1>
@@ -33,39 +55,57 @@
     </section>
 
     <!-- sessions section -->
-    <section id="sessions">
-        <h1>SESSIONS</h1>
+    <section id="seasons">
+        <h1>SEASONS</h1>
         <!-- grid a 4 columnas -->
         <div class="grid-4">
             <div class="col-4">
-                <img src="./img/sessions1.jpg" alt="">
-                <h1>Session 1</h1>
+                <img src="./img/season1.jpg" alt="">
+                <h2>Season 1</h2>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed eligendi doloribus corporis tenetur nulla autem, velit perferendis ullam officiis dolor necessitatibus repellat. Delectus hic minima dolore atque itaque et iste.</p>
                 <button>Read more</button>
             </div>
             <div class="col-4">
-                <img src="./img/sessions2.jpg" alt="">
-                <h1>Session 2</h1>
+                <img src="./img/season2.jpg" alt="">
+                <h2>Season 2</h2>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae tempore sint dignissimos fugit impedit quaerat eligendi cupiditate voluptas, libero quas ex nobis commodi. Dolorem culpa dolor tempore debitis, repellendus nam.</p>
                 <button>Read more</button>
             </div>
             <div class="col-4">
-                <img src="./img/sessions3.jpg" alt="">
-                <h1>Session 3</h1>
+                <img src="./img/season3.jpg" alt="">
+                <h2>Season 3</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, est tempora quas alias debitis quaerat sit delectus ea adipisci dolorem inventore! Obcaecati perspiciatis saepe minima eum ad quibusdam corrupti non?</p>
                 <button>Read more</button>
             </div>
             <div class="col-4">
-                <img src="./img/sessions4.jpg" alt="">
-                <h1>Session 4</h1>
+                <img src="./img/season4.jpg" alt="">
+                <h2>Season 4</h2>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores aliquid, vero velit, nobis, ut eos fugiat aut reprehenderit hic nostrum ad? Ad itaque voluptatibus enim similique eius, corporis maiores id?</p>
+                <button>Read more</button>
+            </div>
+            <div class="col-4">
+                <img src="./img/season5.jpg" alt="">
+                <h2>Season 5</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed eligendi doloribus corporis tenetur nulla autem, velit perferendis ullam officiis dolor necessitatibus repellat. Delectus hic minima dolore atque itaque et iste.</p>
+                <button>Read more</button>
+            </div>
+            <div class="col-4">
+                <img src="./img/season6.jpg" alt="">
+                <h2>Season 6</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed eligendi doloribus corporis tenetur nulla autem, velit perferendis ullam officiis dolor necessitatibus repellat. Delectus hic minima dolore atque itaque et iste.</p>
                 <button>Read more</button>
             </div>
         </div>
     </section>
-    <section>Otra cosa</section>
-    <section>Otra cosa</section>
-    <footer>Aquí va el footer</footer>
+    <section id="gallery">
+        GALLERY
+    </section>
+    <section id="facts">
+        FACTS
+    </section>
+    <footer>
+        <a href="https://www.netflix.com/search?q=blackmirror" target="_blank">Visita la página oficial</a>
+    </footer>
     </div>
 </body>
 </html>
