@@ -12,26 +12,25 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- Mis funciones,  -->
     <script src="./js/functions.js"></script>
+    <!-- Este código regula la ventana modal del footer. Debe estar aquí en la propia página porque no está "encapsulado" en una function y por tanto no se puede invocar-->
 </head>
 <body>
     <!-- we use usually semantic tags for structure -->
     <!-- 1 nav + 1 hero section + n sections + footer -->
     <div id="wrapper"> <!-- tiene dentro todo el contenido de la página para estilarlo y manipularlo junto, en bloque --> 
     <nav>
-        <div class="topnav" id="myTopnav">
-            <a href="#" class="active">Home</a>
-            <a href="#intro">Introduction</a>
-            <a href="#seasons">Seasons</a>
-            <a href="#facts">Facts</a>
-            <a href="#gallery">Gallery</a>
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-            <i class="fa fa-bars"></i>
-            </a>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#" onclick="closeNav()">Home</a>
+            <a href="#intro" onclick="closeNav()">Intro</a>
+            <a href="#seasons" onclick="closeNav()">Seasons</a>
+            <a href="#teasers" onclick="closeNav()">Teasers</a>
+            <a href="#gallery" onclick="closeNav()">Gallery</a>
+            <a href="#contact" onclick="closeNav()">Contact</a>
         </div>
     </nav>
-
-    <!-- arrow up to came back -->
-    <i class="fa fa-arrow-circle-up" aria-hidden="true"></i>
+    <!-- Botón hamburguesa para abrir el menu lateral-->
+    <span id="hamburguesa" onclick="openNav()">&#9776</span>
 
     <!-- HERO SECTION -->
     <section id="hero">
@@ -40,7 +39,7 @@
 
     <!-- INTRO SECTION -->
     <section id="intro">
-        <h1>INTRODUCTION</h1>
+        <h1>BLACK MIRROR</h1>
         <!-- grid a 2 columnas -->
         <div class="grid-2">                                    <!-- contenedor grid --> 
             <div class="col-2">
@@ -97,15 +96,159 @@
             </div>
         </div>
     </section>
+    
+    <section id="teasers">
+        <h1>TEASERS</h1>
+        <div class="grid-2">
+            <div class="col-2">
+                <div class="container">
+                    <iframe class="responsive-iframe" src="https://www.youtube.com/embed/di6emt8_ie8?si=JknUU27-Y5CNpYHf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="container">
+                    <iframe class="responsive-iframe" src="https://www.youtube.com/embed/5zKGhUeBeb4?si=HZ0n4euo-ztqyuWw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="container">
+                    <iframe class="responsive-iframe" src="https://www.youtube.com/embed/jDiYGjp5iFg?si=y0uqVkWGWehkdZmC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="container">
+                    <iframe class="responsive-iframe" src="https://www.youtube.com/embed/TYf4E_Kb37A?si=EpShfk8Oq9Wc7Dae" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="container">
+                    <iframe class="responsive-iframe" src="https://www.youtube.com/embed/oviaUj5eUzU?si=Bu7H4YLKdrkNpUPQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="container">
+                    <iframe class="responsive-iframe" src="https://www.youtube.com/embed/v0dddymcew8?si=uoUZugKuzTpDMLx3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="gallery">
-        GALLERY
+        <h1>GALLERY</h1>
+        <div class="row">
+            <div class="column">
+                <div class="containerImg">
+                    <img src="https://fastly.picsum.photos/id/241/600/400.jpg?hmac=1NuJX4aVCJtG_nUAvMmzujbsM6m4GZ3p6Nyo0xi9C3w" class="image">
+                    <div class="overlay">Primera foto</div>
+                </div>
+                <img src="https://fastly.picsum.photos/id/950/500/500.jpg?hmac=RuCsC8CWDZWdq1nnWHiWJQ3QRrklDSe2Q8A90Oc8cug">
+                <img src="https://fastly.picsum.photos/id/742/200/400.jpg?hmac=D34SY4pQpGIqOlzmDCMhKZ_GN6LuOH0K4I7kdKelByk">
+                <img src="https://fastly.picsum.photos/id/924/350/250.jpg?hmac=ycu007c6esemqyMhmOjiJxOZVpew5I6Li_UpAEHbC2A">
+                <img src="https://fastly.picsum.photos/id/757/100/200.jpg?hmac=FcvptwNNCRzfbIb9o9aQt9WxvCYBRzx3EWVaYIhmZp0">
+                <img src="https://fastly.picsum.photos/id/294/600/300.jpg?hmac=L9YToNZS9JHMVcFz-vimC7C9xXoDAHmNGH40fbeFShc">
+                <img src="https://fastly.picsum.photos/id/493/800/300.jpg?hmac=Wv3e0FAyfZkGGl5WLKYchzPXNivbqV566cQwcC7KO_I">
+            </div>
+            <div class="column">
+                <img src="https://fastly.picsum.photos/id/924/350/250.jpg?hmac=ycu007c6esemqyMhmOjiJxOZVpew5I6Li_UpAEHbC2A">
+                <img src="https://fastly.picsum.photos/id/757/100/200.jpg?hmac=FcvptwNNCRzfbIb9o9aQt9WxvCYBRzx3EWVaYIhmZp0">
+                <img src="https://fastly.picsum.photos/id/950/500/500.jpg?hmac=RuCsC8CWDZWdq1nnWHiWJQ3QRrklDSe2Q8A90Oc8cug">
+                <img src="https://fastly.picsum.photos/id/742/200/400.jpg?hmac=D34SY4pQpGIqOlzmDCMhKZ_GN6LuOH0K4I7kdKelByk">
+                <img src="https://fastly.picsum.photos/id/294/600/300.jpg?hmac=L9YToNZS9JHMVcFz-vimC7C9xXoDAHmNGH40fbeFShc">
+                <img src="https://fastly.picsum.photos/id/241/600/400.jpg?hmac=1NuJX4aVCJtG_nUAvMmzujbsM6m4GZ3p6Nyo0xi9C3w">
+            </div>
+            <div class="column">
+                <img src="https://fastly.picsum.photos/id/757/100/200.jpg?hmac=FcvptwNNCRzfbIb9o9aQt9WxvCYBRzx3EWVaYIhmZp0">
+                <img src="https://fastly.picsum.photos/id/950/500/500.jpg?hmac=RuCsC8CWDZWdq1nnWHiWJQ3QRrklDSe2Q8A90Oc8cug">
+                <img src="https://fastly.picsum.photos/id/294/600/300.jpg?hmac=L9YToNZS9JHMVcFz-vimC7C9xXoDAHmNGH40fbeFShc">
+                <img src="https://fastly.picsum.photos/id/924/350/250.jpg?hmac=ycu007c6esemqyMhmOjiJxOZVpew5I6Li_UpAEHbC2A">
+                <img src="https://fastly.picsum.photos/id/294/600/300.jpg?hmac=L9YToNZS9JHMVcFz-vimC7C9xXoDAHmNGH40fbeFShc">
+                <img src="https://fastly.picsum.photos/id/241/600/400.jpg?hmac=1NuJX4aVCJtG_nUAvMmzujbsM6m4GZ3p6Nyo0xi9C3w">
+                <img src="https://fastly.picsum.photos/id/742/200/400.jpg?hmac=D34SY4pQpGIqOlzmDCMhKZ_GN6LuOH0K4I7kdKelByk">
+            </div>
+            <div class="column">
+                <img src="https://fastly.picsum.photos/id/757/100/200.jpg?hmac=FcvptwNNCRzfbIb9o9aQt9WxvCYBRzx3EWVaYIhmZp0">
+                <img src="https://fastly.picsum.photos/id/924/350/250.jpg?hmac=ycu007c6esemqyMhmOjiJxOZVpew5I6Li_UpAEHbC2A">
+                <img src="https://fastly.picsum.photos/id/950/500/500.jpg?hmac=RuCsC8CWDZWdq1nnWHiWJQ3QRrklDSe2Q8A90Oc8cug">
+                <img src="https://fastly.picsum.photos/id/241/600/400.jpg?hmac=1NuJX4aVCJtG_nUAvMmzujbsM6m4GZ3p6Nyo0xi9C3w">
+                <img src="https://fastly.picsum.photos/id/950/500/500.jpg?hmac=RuCsC8CWDZWdq1nnWHiWJQ3QRrklDSe2Q8A90Oc8cug">
+                <img src="https://fastly.picsum.photos/id/294/600/300.jpg?hmac=L9YToNZS9JHMVcFz-vimC7C9xXoDAHmNGH40fbeFShc">
+            </div>
+        </div>
     </section>
-    <section id="facts">
-        FACTS
+
+    <section id="contact">
+        <h1>CONTACT</h1>
+        <div class="grid-2">
+            <div class="col-2">
+                <ul>
+                    <li><b>Dirección:</b> C/ Frederick Termann 4</li>
+                    <li><b>Teléfono:</b> 763 565 353</li>
+                    <li><b>Redes sociales: </b>
+                        <a href="https://twitter.com/PTAMalaga" target="_blank"><i class="fa fa-twitter" style="color: skyblue;"></i></a>
+                        <a href="https://www.instagram.com/malaga_techpark/" target="_blank"><i class="fa fa-instagram" style="color: palevioletred;"></i></a>
+                        <a href="https://es.linkedin.com/company/malaga-techpark" target="_blank"><i class="fa fa-linkedin" style="color: rgb(88, 88, 214);"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+            <div class="col-2">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3197.256182141223!2d-4.557382324584257!3d36.7404214710677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd72f1d2ffe3a137%3A0xe095a3ea561debe2!2sC.%20Frederick%20Terman%2C%2029590%2C%20M%C3%A1laga!5e0!3m2!1ses!2ses!4v1701764472243!5m2!1ses!2ses" class="responsive-iframe" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
     </section>
+
     <footer>
+        <div class="grid-3">
+            <div class="col-3">
+                <!-- Logo pequeño en footer -->
+                <img src="./img/Netflix-Symbol.png" alt="">
+            </div>
+            <!-- Barra de navegación repetida -->
+            <div class="col-3">
+                <ul>
+                    <a href="#">
+                        <li>Home</li>
+                    </a>
+                    <a href="#intro">
+                        <li>Intro</li>
+                    </a>
+                    <a href="#seasons">
+                        <li>Seasons</li>
+                    </a>
+                    <a href="#teasers">
+                        <li>Teasers</li>
+                    </a>
+                    <a href="#gallery">
+                        <li>Gallery</li>
+                    </a>
+                    <a href="#contact">
+                        <li>Contact</li>
+                    </a>
+                </ul>
+            </div>
+            <!-- Atribuciones y disclaimers -->
+            <div class="col-3">
+            <!-- Trigger/Open The Modal -->
+            <button id="myBtn">Créditos</button>
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, iusto veniam? Aperiam, dignissimos cupiditate, dolores a perferendis molestiae hic officiis cumque eveniet ex exercitationem earum corrupti commodi veritatis quasi adipisci.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, hic animi quia ipsa sequi sapiente vitae enim quam, nobis et commodi perspiciatis. Provident animi, similique eius laboriosam veniam quis quod!</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta commodi autem earum, dolore, est assumenda iure enim sint dolor atque laborum! Nam sit dolore tempore amet veniam numquam incidunt rem?</p>
+            </div>
+            </div>
+                <p>Página web realizada por: Juan Carlos Ocaña Heredia<br>
+                Lenguaje de Marcas<br>
+                1ºDAM Curso 2023/24</p>
+            </div>
+        </div>
         <a href="https://www.netflix.com/search?q=blackmirror" target="_blank">Visita la página oficial</a>
     </footer>
     </div>
+    <!-- Mis funciones,  -->
+    <script src="./js/functions.js"></script>
+    <!-- Este código regula la ventana modal del footer. Debe estar aquí en la propia página porque no está "encapsulado" en una function y por tanto no se puede invocar-->
 </body>
 </html>
