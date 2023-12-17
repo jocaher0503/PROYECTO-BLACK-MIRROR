@@ -248,6 +248,32 @@ h2{
     opacity: 1;
 }
 
+/*********************** FUN FACTS ***************************/
+
+.accordion {
+    max-width: 60%;
+    text-align: left;
+    margin: auto;
+}
+article {
+    border: 1px solid #fff;
+    padding: 1em;
+    margin: 1em auto;
+}
+input[type="radio"] {
+    appearance: none;
+    position: fixed;
+    top: -100vh; left: -100vh;
+    & ~ div {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s;
+    }
+    &:checked ~ div {
+    max-height: 200px;
+    }
+}
+
 /*********************** CONTACT ***************************/
 
 #contact ul li{
@@ -296,6 +322,9 @@ footer ul a li{
 }
 footer ul a li:hover{
     border-bottom: 1px solid white;
+}
+footer p{
+    text-align: center;
 }
 
 /******************** Ventana modal en footer ***********************/
